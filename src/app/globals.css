@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	.bg-primary {
+		@apply text-primary-foreground;
+	}
+	.bg-secondary {
+		@apply text-secondary-foreground;
+	}
+	.bg-tertiary {
+		@apply text-tertiary-foreground;
+	}
+}
