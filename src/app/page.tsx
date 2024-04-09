@@ -1,14 +1,19 @@
 "use client";
-import { Tabs, TabPanels, TabPanel } from "@chakra-ui/react";
-import Header from "@/components/Header";
+import { Tabs, TabPanels, ScaleFade } from "@chakra-ui/react";
+import Header from "@/components/shared/Header";
 import { useState } from "react";
+import AboutTab from "@/components/tabs/AboutTab";
+import ProjectsTab from "@/components/tabs/ProjectsTab";
+import SkillsTab from "@/components/tabs/SkillsTab";
+import ContactTab from "@/components/tabs/ContactTab";
 
 const HomePage = () => {
 	const [index, setIndex] = useState(0);
 
 	return (
-		<>
+		<ScaleFade in initialScale={0.5}>
 			<Tabs
+				bgGradient='radial(primary.900, tertiary.main)'
 				index={index}
 				isFitted
 				isLazy
@@ -16,14 +21,14 @@ const HomePage = () => {
 				variant='soft-rounded'>
 				<Header index={index} setIndex={setIndex} />
 
-				<TabPanels>
-					<TabPanel>About</TabPanel>
-					<TabPanel>Projects</TabPanel>
-					<TabPanel>Skills</TabPanel>
-					<TabPanel>Contact</TabPanel>
+				<TabPanels as='main'>
+					<AboutTab />
+					<ProjectsTab />
+					<SkillsTab />
+					<ContactTab />
 				</TabPanels>
 			</Tabs>
-		</>
+		</ScaleFade>
 	);
 };
 

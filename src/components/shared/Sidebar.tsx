@@ -8,8 +8,6 @@ import {
 	VStack,
 } from "@chakra-ui/react";
 const navLinks = ["About", "Projects", "Skills", "Contact"];
-const active = { bg: "primary.600", color: "secondary.main" };
-const notActive = { bg: "transparent", color: "primary.main" };
 
 interface Props {
 	index: number;
@@ -27,12 +25,10 @@ const Sidebar: React.FC<Props> = ({ index, open, setIndex, setOpen }) => {
 				<DrawerCloseButton />
 
 				<DrawerBody mt={12}>
-					<VStack>
+					<VStack as='nav'>
 						{navLinks.map((item, i) => (
 							<Button
-								bg={i === index ? "primary.500" : "transparent"}
-								color='secondary.main'
-								_hover={i === index ? active : notActive}
+								colorScheme='primary'
 								key={i}
 								onClick={() => {
 									if (i !== index) {
@@ -40,6 +36,7 @@ const Sidebar: React.FC<Props> = ({ index, open, setIndex, setOpen }) => {
 										setOpen(false);
 									}
 								}}
+								variant={i === index ? "solid" : "ghost"}
 								w='100%'>
 								{item}
 							</Button>
