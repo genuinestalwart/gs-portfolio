@@ -51,5 +51,5 @@ export const theme = extendTheme({
 		},
 	},
 	config: { initialColorMode: "dark" },
-	fonts: { body: "var(--font-saira)" },
+	fonts: { heading: "var(--font-saira)", body: "var(--font-saira)" },
 });

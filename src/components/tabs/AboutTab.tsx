@@ -1,10 +1,10 @@
+import { Link } from "@chakra-ui/next-js";
 import {
 	Button,
 	Container,
 	Flex,
 	HStack,
 	Heading,
-	Link,
 	ScaleFade,
 	StackDivider,
 	TabPanel,
@@ -22,7 +22,7 @@ const AboutTab = () => {
 					gap={10}
 					h='100%'
 					justify='center'>
-					<Heading as='h1' size={["2xl", "3xl"]} textAlign='center'>
+					<Heading as='h1' size='3xl' textAlign='center'>
 						I am <span className='text-primary'>incredible</span>
 					</Heading>
 

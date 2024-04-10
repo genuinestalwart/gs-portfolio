@@ -20,7 +20,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<html className={saira.variable} lang='en'>
 			<body className='bg-tertiary'>
-				<Providers>{children}</Providers>
+				<div className='container'>
+					<Providers>{children}</Providers>
+				</div>
 			</body>
 		</html>
 	);

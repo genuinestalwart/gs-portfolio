@@ -3,6 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+	* {
+		&::-webkit-scrollbar {
+			@apply h-2 w-2;
+		}
+		&::-webkit-scrollbar-track {
+			@apply bg-tertiary;
+		}
+		&::-webkit-scrollbar-thumb {
+			@apply bg-primary rounded-lg;
+		}
+	}
 	.bg-primary {
 		@apply text-primary-foreground;
 	}

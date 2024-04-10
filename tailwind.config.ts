@@ -4,6 +4,7 @@ const config: Config = {
 	content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
 	plugins: [],
 	theme: {
+		container: { center: true, screens: { "2xl": "96em" } },
 		extend: {
 			colors: {
 				primary: { DEFAULT: "#674eff", foreground: "#f8f7ff" },
