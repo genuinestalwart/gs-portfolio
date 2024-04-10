@@ -28,7 +28,20 @@ const Sidebar: React.FC<Props> = ({ index, open, setIndex, setOpen }) => {
 					<VStack as='nav'>
 						{navLinks.map((item, i) => (
 							<Button
-								colorScheme='primary'
+								_active={{
+									bg: "primary.100",
+									color: "primary.main",
+								}}
+								bg={i === index ? "primary.500" : "transparent"}
+								color='secondary.main'
+								_hover={
+									i === index
+										? { bg: "primary.600" }
+										: {
+												bg: "primary.50",
+												color: "primary.main",
+										  }
+								}
 								key={i}
 								onClick={() => {
 									if (i !== index) {

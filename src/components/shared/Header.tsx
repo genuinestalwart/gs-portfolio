@@ -23,8 +23,11 @@ const Header = ({ index, setIndex }: { index: number; setIndex: Function }) => {
 			<Hide above='sm'>
 				<Box alignItems='center' display='flex' h='100%'>
 					<IconButton
+						_active={{ bg: "primary.100" }}
 						aria-label='navbar menu'
-						colorScheme='primary'
+						borderColor='currentcolor'
+						color='primary.main'
+						_hover={{ bg: "primary.50" }}
 						icon={<LuMenu />}
 						onClick={() => setOpen(true)}
 						variant='outline'

@@ -44,7 +44,10 @@ const AboutTab = () => {
 							href='https://github.com/genuinestalwart'
 							isExternal>
 							<Button
-								colorScheme='primary'
+								_active={{ bg: "primary.700" }}
+								bg='primary.500'
+								color='secondary.main'
+								_hover={{ bg: "primary.600" }}
 								leftIcon={<LuGithub />}>
 								GitHub
 							</Button>
@@ -54,7 +57,10 @@ const AboutTab = () => {
 							href='https://github.com/genuinestalwart'
 							isExternal>
 							<Button
-								colorScheme='primary'
+								_active={{ bg: "primary.100" }}
+								borderColor='currentcolor'
+								color='primary.main'
+								_hover={{ bg: "primary.50" }}
 								rightIcon={<LuFileText />}
 								variant='outline'>
 								Resume

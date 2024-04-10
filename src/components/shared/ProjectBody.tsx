@@ -16,7 +16,7 @@ interface Item {
 	image: string;
 	livelink: string;
 	name: string;
-	tags: Array<{ cs: string; text: string }>;
+	tags: Array<{ bg: string; text: string }>;
 }
 
 const ProjectBody = ({ item }: { item: Item }) => {
@@ -24,7 +24,7 @@ const ProjectBody = ({ item }: { item: Item }) => {
 		<CardBody>
 			<Stack gap={6}>
 				<AspectRatio ratio={16 / 9}>
-					<Image alt={item.name} borderRadius={6} src={item.image} />
+					<Image alt={item.name} borderRadius='md' src={item.image} />
 				</AspectRatio>
 
 				<Heading as='h2' size='lg'>
@@ -39,7 +39,8 @@ const ProjectBody = ({ item }: { item: Item }) => {
 				{item.tags.map((tag, i) => (
 					<WrapItem key={i}>
 						<Badge
-							colorScheme={tag.cs || undefined}
+							bg={tag.bg}
+							color='secondary.main'
 							variant='solid'>
 							{tag.text}
 						</Badge>

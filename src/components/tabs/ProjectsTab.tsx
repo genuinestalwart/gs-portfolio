@@ -44,7 +44,10 @@ const ProjectsTab = () => {
 											href={item.github}
 											isExternal>
 											<Button
-												colorScheme='primary'
+												_active={{ bg: "primary.700" }}
+												bg='primary.500'
+												color='secondary.main'
+												_hover={{ bg: "primary.600" }}
 												rightIcon={<LuExternalLink />}>
 												Read More
 											</Button>
