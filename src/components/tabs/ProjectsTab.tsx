@@ -24,37 +24,38 @@ const ProjectsTab = () => {
 				<Container maxW={[null, "45ch", "80ch", "100ch"]}>
 					<SimpleGrid columns={[1, null, 2, 3]} spacing={8}>
 						{projects.map((item, i) => (
-							<LinkBox h='100%' key={i}>
-								<Card
-									bg='tertiary.900'
-									boxShadow='lg'
-									color='secondary.50'
-									h='100%'
-									_hover={{
-										bg: "tertiary.800",
-										boxShadow: "dark-lg",
-										color: "secondary.100",
-									}}
-									transitionDuration='0.4s'>
-									<ProjectBody item={item} />
+							<Card
+								as={LinkBox}
+								bg='tertiary.900'
+								boxShadow='lg'
+								color='secondary.50'
+								h='100%'
+								_hover={{
+									bg: "tertiary.800",
+									boxShadow: "dark-lg",
+									color: "secondary.100",
+								}}
+								key={i}
+								transitionDuration='0.4s'>
+								<ProjectBody item={item} />
 
-									<CardFooter>
-										<Link
-											_hover={{ textDecor: "none" }}
-											href={item.github}
-											isExternal>
-											<Button
-												_active={{ bg: "primary.700" }}
-												bg='primary.500'
-												color='secondary.main'
-												_hover={{ bg: "primary.600" }}
-												rightIcon={<LuExternalLink />}>
-												Read More
-											</Button>
-										</Link>
-									</CardFooter>
-								</Card>
-							</LinkBox>
+								<CardFooter>
+									<Button
+										as={Link}
+										_active={{ bg: "primary.700" }}
+										bg='primary.500'
+										color='secondary.main'
+										_hover={{
+											bg: "primary.600",
+											textDecor: "none",
+										}}
+										href={item.github}
+										isExternal
+										rightIcon={<LuExternalLink />}>
+										Read More
+									</Button>
+								</CardFooter>
+							</Card>
 						))}
 					</SimpleGrid>
 				</Container>

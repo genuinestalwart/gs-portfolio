@@ -40,32 +40,30 @@ const AboutTab = () => {
 					<HStack
 						divider={<StackDivider borderColor='primary.main' />}
 						spacing={4}>
-						<Link
+						<Button
+							as={Link}
+							_active={{ bg: "primary.700" }}
+							bg='primary.500'
+							color='secondary.main'
+							_hover={{ bg: "primary.600", textDecor: "none" }}
 							href='https://github.com/genuinestalwart'
-							isExternal>
-							<Button
-								_active={{ bg: "primary.700" }}
-								bg='primary.500'
-								color='secondary.main'
-								_hover={{ bg: "primary.600" }}
-								leftIcon={<LuGithub />}>
-								GitHub
-							</Button>
-						</Link>
+							isExternal
+							leftIcon={<LuGithub />}>
+							GitHub
+						</Button>
 
-						<Link
-							href='https://github.com/genuinestalwart'
-							isExternal>
-							<Button
-								_active={{ bg: "primary.100" }}
-								borderColor='currentcolor'
-								color='primary.main'
-								_hover={{ bg: "primary.50" }}
-								rightIcon={<LuFileText />}
-								variant='outline'>
-								Resume
-							</Button>
-						</Link>
+						<Button
+							as={Link}
+							_active={{ bg: "primary.100" }}
+							borderColor='currentcolor'
+							color='primary.main'
+							_hover={{ bg: "primary.50", textDecor: "none" }}
+							href='https://drive.google.com/file/d/14mZKAP8jKaHH-k-QuDK1eRUdO7aUwxFU/view?usp=sharing'
+							isExternal
+							rightIcon={<LuFileText />}
+							variant='outline'>
+							Resume
+						</Button>
 					</HStack>
 				</Flex>
 			</ScaleFade>
