@@ -1,6 +1,6 @@
-import jerinsParlour from "@/assets/jerins-parlour.png";
-import bistroBoss from "@/assets/bistro-boss-restaurant.png";
-import colorTheGrid from "@/assets/color-the-grid.png";
+import jerinsParlour from "@/assets/projects/jerins-parlour.png";
+import bistroBoss from "@/assets/projects/bistro-boss-restaurant.png";
+import colorTheGrid from "@/assets/projects/color-the-grid.png";
 
 export const projects = [
 	{
